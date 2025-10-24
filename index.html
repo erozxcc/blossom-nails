@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blossom Nails — Manicure & Nail Care</title>
+  <link rel="icon" type="image/jpg" href="Blossom Nails Logo.jpg">
+  <meta name="description" content="Clean, modern manicure studio landing page template." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BN</div>
+        <div>
+          <div style="font-weight:700">Blossom Nails</div>
+          <div class="small" style="color:var(--muted)">Manicure • Nail Art • Care</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </header><section class="hero">
+  <div class="hero-left">
+    <h1>Polish your look — gentle, precise, beautiful.</h1>
+    <p class="lead">Professional manicure services in a calm, clean studio. From classic mani to custom nail art, we make nails feel like a treat.</p>
+    
+      <button class="btn secondary">View Services</button>
+    </div>
+  </div>
+
+  <aside class="card">
+    <h3 style="margin-top:0">Quick info</h3>
+    <p class="small">Open Tue–Sun • 10:00 AM — 7:00 PM</p>
+    <p class="small">123 Flower Road, Manila</p>
+    <hr style="border:none;border-top:1px solid #f1e6ea;margin:12px 0">
+    <h4 style="margin:8px 0">Signature</h4>
+    <p class="small">Gel manicure, nail art, and hydrating hand treatment — 1 hour 15 min.</p>
+    <p style="margin:8px 0" class="price">Starting at ₱550</p>
+  </aside>
+</section>
+
+<section id="services">
+  <h2 style="margin-bottom:12px">Our Services</h2>
+  <div class="services">
+    <div class="card service">
+      <div style="font-size:28px"></div>
+      <h3>Classic Manicure</h3>
+      <p class="small">Trim, shape, cuticle care, polish.</p>
+      <p class="price">₱250</p>
+    </div>
+    <div class="card service">
+      <div style="font-size:28px"></div>
+      <h3>Gel Manicure</h3>
+      <p class="small">Long-lasting finish, cured under LED light.</p>
+      <p class="price">₱350</p>
+    </div>
+    <div class="card service">
+      <div style="font-size:28px"></div>
+      <h3>Nail Art</h3>
+      <p class="small">Custom designs, decals, gems.</p>
+      <p class="price">From ₱150</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 style="margin-bottom:12px">Gallery</h2>
+  <div class="gallery">
+    <img src="Classic Manicure List.jpg" alt="Manicure close up"">
+    <img src="Gel Manicure List.png" alt="Nail art example">
+    <img src="Nail Art Designs 1-30.jpg" alt="Polished nails">
+  </div>
+</section>
+
+<section class="info">
+  <div class="about">
+    <div class="card">
+      <h3 style="margin-top:0">About Blossom Nails</h3>
+      <p class="small">At Blossom Nails we focus on gentle techniques, premium products, and creative looks. Our technicians are certified and follow strict hygiene practices.</p>
+      <p class="small">Prefer subtle or bold? We consult before every service to create the perfect finish.</p>
+    </div>
+  </div>
+
+
+</section>
+
+<footer>
+  © <span id="year"></span> Blossom Nails — All rights reserved
+</footer>
+
+  </div>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script></body>
+</html>
